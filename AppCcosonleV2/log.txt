@@ -1,138 +1,20 @@
-================================= Run 1 ===================================
-Summary
-======== Technology: ZIGBEE
-
-1.GLOBAL_SETTINGS  ___________________________________________________________
-AGC_INTERVAL                                      :          5 ms      
-AUTO_READING_LIMIT                                :          0         
-DUT_KEEP_TRANSMIT                                 :          1         
-DUT_RX_SETTLE_TIME_MS                             :          0 ms      
-DUT_TX_SETTLE_TIME_MS                             :          0 ms      
-IQ_P_TO_A_OQASK                                   :          3 dB      
-LOAD_INTERNAL_WAVEFORM                            :          0         
-PER_2450MHZ_O-QPSK_PACKETS_NUM                    :        200         
-PER_VSG_TIMEOUT_SEC                               :         20 sec     
-PM_2450MHZ_OQPSK_SAMPLE_INTERVAL_US               :        160 us      
-PM_IF_FREQ_SHIFT_MHZ                              :          0 MHz     
-RELATIVE_LIMIT                                    :          0         
-RESET_TEST_ITEM_DURING_RETRY                      :          0         
-RETRY_ERROR_ITEMS                                 :          0         
-RETRY_TEST_ITEM                                   :          5         
-TX_AVERAGE                                        :          1         
-TX_OQPSK_2450MHZ_SAMPLE_INTERVAL_US               :        692 us      
-VSA_PORT                                          :          2         
-VSA_SAVE_CAPTURE_ALWAYS                           :          0         
-VSA_SAVE_CAPTURE_ON_FAILED                        :          1         
-VSA_TRIGGER_TIMEOUT_SEC                           :          1 sec     
-VSA_TRIGGER_TYPE                                  :          6         
-VSG_PORT                                          :          2         
-VSG_WAIT_TXDONE                                   :          1         
-VSA_AMPLITUDE_TOLERANCE_DB                        :          3 dB      
-VSA_PRE_TRIGGER_TIME_US                           :          3 us      
-VSA_TRIGGER_LEVEL_DB                              :        -25 dB      
-VSG_MAX_POWER                                     :         -5         
-PER_2450MHZ_O-QPSK_WAVEFORM_NAME                  : zigbee_250k_15bytes_80M.iqvsg         
-PER_WAVEFORM_DESTINATION_MAC                      : 010000C0FFEE         
-PER_WAVEFORM_PATH                                 :   ../iqvsg         
-RX_TO_TX_WAVEFORM_NAME                            : zigbee_20byte_ack_request_800us.iqvsg         
-SPECTRUM_CALCULATION_DURATION                     :     PACKET         
-Test Time = 0.012 s
-ERROR_MESSAGE                                     :[Info] Function completed.
-            
-2.CONNECT_IQ_TESTER  _________________________________________________________
-APP_ID                                            :          1         
-APT_ENABLE                                        :          1         
-DH_ENABLE                                         :          0         
-DH_OBTAIN_CONTROL_TIMEOUT_MS                      :     300000 ms      
-DH_PROBE_TIME_MS                                  :        100 ms      
-DH_TOKEN_ID                                       :          1         
-IQTESTER_RECONNECT                                :          0         
-IQTESTER_TYPE                                     :          1         
-REQUEST_RESOURCE_TIMEOUT_SEC                      :         30 sec     
-IQTESTER_MODULE_01                                : 192.168.7.254:B         
-OPTION_STRING                                     :                    
-Test Time = 0.284 s
-IQMEASURE_VERSION                                 : 4.0.7.0 (2024-01-26) 302058 
-IQTESTER_INFO                                     : IQmeasure: 4.0.7.0 (2024-01-26) 302058
-Tester 1 SN: IQM801148
-Model number: IQXEL-M
-Firmware revision: 1.31.0
-Tester 1 hardware version: 1.0.0
-
- 
-IQTESTER_SERIAL_NUM_01                            : IQM801148       
-TEST_MANAGER_VERSION                              : 5.0.1 (2022-11-11) 
-ERROR_MESSAGE                                     :[Info] Function completed.
-            
-3.INSERT_DUT  ________________________________________________________________
-RELOAD_DUT_DLL                                    :          0         
-CONNECTION_STRING                                 : 192.168.5.1         
-DUT_DLL_FILENAME                                  : SiLabs_Zigbee.dll         
-EEPROM_FILENAME                                   :                    
-OPTION_STRING                                     : Config_RAIL_Zigbee_telnet_F5298P.ini         
-Test Time = 0.627 s
-DUT_VERSION                                       : Silabs Zigbee version 1.0.0 
-VDUT_VERSION                                      : 3.0.0 (2012-8-24) 
-ERROR_MESSAGE                                     :[Info] Function completed.             
-4.RUN_DUT_COMMAND  ___________________________________________________________
-WAIT_TIME_MS                                      :          0 ms      
-DUT_COMMAND                                       : microcom -s 115200 /dev/ttyH0         
-ERROR_STRING                                      :                    
-PASS_STRING                                       :                    
-RESPONSE_COMPLETION_STRING                        :          >         
-Test Time = 3.541 s
-RESPONSE                                          : root@f5298p:~# microcom -s 115200 /dev/ttyH0
-Connection Failed or Connection was closed, check SSH server!
- 
-ERROR_MESSAGE                                     :[Info] Function completed.
-            
-5.INITIALIZE_DUT  ____________________________________________________________
-Test Time = 1.583 s
-ERROR_MESSAGE                                     :[Error] DUT Initialize Fail!                   --- [Failed]  :  test function error
-
-6.LOAD_PATH_LOSS_TABLE  ______________________________________________________
-        Skipped
-
-7.TX_MULTI_VERIFICATION  2405 ________________________________________________
-        Skipped
-
-8.TX_MULTI_VERIFICATION  2480 ________________________________________________
-        Skipped
-
-9.RX_VERIFY_PER  2405 ________________________________________________________
-        Skipped
-
-10.RX_VERIFY_PER  2480 _______________________________________________________
-        Skipped
-
-11.REMOVE_DUT  _______________________________________________________________
-        Skipped
-
-12.DISCONNECT_IQ_TESTER  _____________________________________________________
-        Skipped
---------------------------------------------------------------------
-                         *************
-                         *  F A I L  *
-                         *************
-1.GLOBAL_SETTINGS                                           :0.012 s
-2.CONNECT_IQ_TESTER                                         :0.284 s
-3.INSERT_DUT                                                :0.627 s
-4.RUN_DUT_COMMAND                                           :3.541 s
-5.INITIALIZE_DUT                                            :1.583 s         --- [Failed]
-6.LOAD_PATH_LOSS_TABLE                                      :0.000 s         --- [Skipped]
-7.TX_MULTI_VERIFICATION  2405                               :0.000 s         --- [Skipped]
-8.TX_MULTI_VERIFICATION  2480                               :0.000 s         --- [Skipped]
-9.RX_VERIFY_PER  2405                                       :0.000 s         --- [Skipped]
-10.RX_VERIFY_PER  2480                                      :0.000 s         --- [Skipped]
-11.REMOVE_DUT                                               :0.000 s         --- [Skipped]
-12.DISCONNECT_IQ_TESTER                                     :0.000 s         --- [Skipped]
-Total Run(s)                  :1
-Passed Run(s)                 :0
-Failed Run(s) on Limits       :0
-Failed Run(s) on Errors       :1
-In This Run:
-    Fail(s) on Limits         :0
-    Fail(s) on Errors         :1
-    Flow Run Time             :6.173 s
-    Test Function Time        :6.048 s
---------------------------------------------------------------------
+INFO: Processing task #0
+INFO: Processing task #1
+INFO: Processing task #2
+INFO: Processing task #3
+INFO: Finished task #2
+INFO: Finished task #1
+INFO: Processing task #4
+INFO: Processing task #5INFO: Processing task #0
+INFO: Processing task #1
+INFO: Processing task #3
+INFO: Processing task #2
+INFO: Finished task #1
+INFO: Processing task #4
+INFO: Finished task #3
+INFO: Finished task #0
+INFO: Finished task #2
+INFO: Finished task #4
+INFO: Finished task #8
+INFO: Finished task #9
+ERROR: Main thread completed all tasks.
